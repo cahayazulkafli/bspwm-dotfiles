@@ -19,6 +19,7 @@ window {
 	transparency: "real";
 	orientation: vertical;
 	border-color: #50a14f;
+	border-radius: 10px;
 }
 
 mainbox {

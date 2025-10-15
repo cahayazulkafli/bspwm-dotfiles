@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-## Config file created by cahayazulkafli, 11/06/22
+#!/bin/sh
 
 ##------ Bspwm ------##
 
@@ -54,7 +52,7 @@ bspc rule -a telegram desktop='^5' follow=on focus=on
 ##------ Essential startup apps ------## 
 
 # Kill existing apps before restarting bspwm
-pkill polkitd
+pkill xfce-polkit
 pkill ksuperkey
 pkill dunst
 pkill wal
@@ -63,7 +61,7 @@ pkill wal
 xsetroot -cursor_name left_ptr &
 
 # Launch policy kit agent
-/usr/lib/polkit-1/polkitd &
+/usr/libexec/xfce-polkit &
 
 # Launch pipewire
 pipewire &
@@ -81,10 +79,13 @@ sh ~/.config/picom/launch.sh &
 # Start polybar
 sh ~/.config/polybar/launch.sh &
 
+# Restore wallpaper and dunst colorscheme
+wal -i ~/Pictures/wallpapers/girl-red.png -o ~/.config/dunst/launchdunst.sh && wal -R &
+
 # Launch notification daemon
 sh ~/.config/dunst/launch.sh &
 
-# Restore wallpaper
-wal -i ~/Pictures/wallpapers/girl-red.png && wal -R &
+# Connect wireless headphone
+sh ~/.config/bspwm/scripts/wireless-headphone.sh &
 
 ##------ EOF ------##
