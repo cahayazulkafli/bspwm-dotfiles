@@ -11,8 +11,9 @@ while IFS=' ' read -r _ address alias; do
     # Print only the battery percentage for Polybar
     echo "$battery_percentage%"
     exit 0
-  fi
+   else
+	   echo "No devices connected"
+fi
 done < <(bluetoothctl devices)
 
-# Exit with a special code if no device is connected
-exit 1
+exit 0

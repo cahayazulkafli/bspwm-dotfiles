@@ -13,7 +13,7 @@ alt + F1
 	sh ~/.config/rofi/main/launcher.sh
 
 # Rofi powermenu
-super + x 
+ctrl + alt + Delete
 	sh ~/.config/rofi/powermenu/powermenu.sh
 
 ##---------- Applications ----------##

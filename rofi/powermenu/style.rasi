@@ -6,10 +6,10 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "GohuFont 11 Nerd Font 14";
-    background:                  #231419;
-    background-alt:              #2D1E23;
-    foreground:                  #FFFFFF;
-    selected:                    #426647;
+    background:                  #151211;
+    background-alt:              #383a42;
+    foreground:                  #e0d3c9;
+    selected:                    #50a14f;
     active:                      #2E3F34;
     urgent:                      #D08261;
 }
